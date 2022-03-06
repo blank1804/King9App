@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".SubSong">
+
+    <!--toolbar-->
+<include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".MainActivity2">
+
+            <TextView
+                android:id="@+id/textForView"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bn_play"
+                    android:onClick="justPlay"
+                    android:text="PLAY"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/bn"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bn_pause"
+                    android:text="PAUES"
+                    android:onClick="justPause"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/bn"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bn_reset"
+                    android:onClick="justReset"
+                    android:text="RESET"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/bn"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
